@@ -36,5 +36,5 @@ import helloworld.views
 urlpatterns = [
     re_path(r'^admin/', admin.site.urls),
     re_path(r'^$', helloworld.views.index),
-    re_path(r'wait/', helloworld.views.waitFor),
+    re_path(r'wait/$', helloworld.views.waitFor),
 ]

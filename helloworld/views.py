@@ -20,7 +20,8 @@ import time
 def index(request):
     return HttpResponse(
         'Hello, World. This is Django running on Google App Engine')
+
 def waitFor(request):
-    time.sleep(65)
-    return HttpResponse(
-        'Hello, World after 65 seconds')
+    secs=int(request.GET['secs'])
+    time.sleep(secs)
+    return HttpResponse('Hello, World after '+str(secs)+' seconds')
